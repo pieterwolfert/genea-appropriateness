@@ -3,6 +3,9 @@ import json
 import csv
 
 def getStimuli(participants):
+    """
+    Retrieves scores for the individual participants from the JSON file. 
+    """
     responses = []
     for p in participants:
         for s in p['trials']:
@@ -14,8 +17,6 @@ def getStimuli(participants):
                 continue
             responses.append(s['responses'])
     return responses
-
-
 
 if __name__=="__main__":
     """
